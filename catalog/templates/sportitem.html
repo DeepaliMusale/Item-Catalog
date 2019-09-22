@@ -1,0 +1,28 @@
+{% include "main.html" %}
+
+<h1>Catalog</h1>
+
+<body>
+
+<nav>
+<ul>
+{% for i in sport %}
+<li>
+	<a href="{{url_for('showItems', itemid = i.id) }}">{{i.name}}</a>
+</li>
+{% endfor %}
+</ul>
+
+</nav>
+
+<article>
+<ul>
+{% for i in itemlist %}
+	<li>{{i.name}}</li>
+{% endfor %}
+</ul>
+</article>
+
+</body>
+
+</html>

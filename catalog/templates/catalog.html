@@ -1,0 +1,21 @@
+{% include "main.html" %}
+
+<h1>Catalog</h1>
+
+<body>
+
+{% for i in sport %}
+
+<li>
+
+	<a href="{{url_for('showItems', itemid = i.id) }}">{{i.name}}</a>
+
+</li>
+
+<br>
+
+{% endfor %}
+
+</body>
+
+</html>
